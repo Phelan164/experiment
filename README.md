@@ -5,6 +5,7 @@ This project consists of two main services:
 
 - **Mock API Service**: Serves order and customer information for testing and development.
 - **Chatbot Backend Service**: Provides a chatbot API to help users find music instrument products and track their orders.
+- **Frontend Chat App**: A simple Next.js web app for chatting with the chatbot backend.
 
 ## Setup Instructions
 
@@ -42,13 +43,26 @@ cd chatbot_backend
 python test.py
 ```
 
+### 5. Set Up and Run the Frontend Chat App
+A simple Next.js frontend is provided for chatting with the backend.
+
+```sh
+cd chatbot_frontend
+npm install
+npm run dev
+```
+
+The frontend will be available at `http://localhost:3000` by default. It connects to the chatbot backend at `http://localhost:8001`.
+
 ## System Overview
 - The **mock API service** serves as a backend to provide order and customer information for the chatbot to use.
 - The **chatbot backend service** helps users find music instrument products and track their orders by interacting with the mock API.
+- The **frontend chat app** provides a user-friendly web interface for chatting with the chatbot backend.
 
 ## Notes
-- Ensure both services are running for full functionality.
+- Ensure all services are running for full functionality.
 - The chatbot service depends on the mock API for order-related queries.
+- The frontend expects the chatbot backend to be running at `http://localhost:8001`.
 - Make sure to configure any required environment variables (such as API keys) in a `.env` file (which should not be committed to git).
 
 ---
