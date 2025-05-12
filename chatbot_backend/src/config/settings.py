@@ -10,10 +10,6 @@ logger = logging.getLogger(__name__)
 
 class Settings(BaseSettings):
     project_dir: Path = Path(__file__).resolve().parents[2]
-    data_dir: Path = project_dir / "data"
-
-    asset_dir: Path = project_dir / "asset"
-
     # host
     host: str = "https://api.aailabbot.com"
     order_host: str = "https://api.order.aailabbot.com"
